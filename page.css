@@ -1,0 +1,383 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('media/fon_.png') no-repeat center center fixed; /* Устанавливаем фото фоном */
+    background-size: cover; /* Масштабируем фото, чтобы оно покрывало весь экран */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333333;
+    position: relative;
+    overflow: hidden; /* Чтобы не было прокрутки, если изображения выходят за пределы */
+}
+
+/* Контейнер с плавающими изображениями */
+.floating-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Отключает взаимодействие с этими изображениями */
+    z-index: -1; /* Изображения будут за основным контентом */
+}
+/* Контейнер с плавающими изображениями */
+.floating-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Отключает взаимодействие с этими изображениями */
+    z-index: -1; /* Изображения будут за основным контентом */
+}
+
+/* Стили для каждого изображения */
+.floating-images img {
+    position: absolute;
+    width: 30px;  /* Размер изображений */
+    height: 30px; /* Размер изображений */
+    opacity: 0.8; /* Прозрачность, чтобы изображения не были слишком заметными */
+    animation: float 50s linear infinite; /* Анимация перемещения */
+}
+
+/* Позиции и движения для изображений */
+.floating-images img:nth-child(1) {
+    top: -50px;   /* Изображение вылетает сверху */
+    left: 10%;
+    animation-duration: 60s;
+}
+
+.floating-images img:nth-child(2) {
+    top: 100%;  /* Изображение вылетает снизу */
+    left: 25%;
+    animation-duration: 80s;
+}
+
+.floating-images img:nth-child(3) {
+    top: -50px;
+    left: 40%;   /* Изображение вылетает сверху */
+    animation-duration: 75s;
+}
+
+.floating-images img:nth-child(4) {
+    top: 100%;
+    left: 55%;   /* Изображение вылетает снизу */
+    animation-duration: 85s;
+}
+
+.floating-images img:nth-child(5) {
+    top: -50px;
+    left: 70%;
+    animation-duration: 65s;
+}
+
+.floating-images img:nth-child(6) {
+    top: 100%;
+    left: 85%;
+    animation-duration: 70s;
+}
+
+.floating-images img:nth-child(7) {
+    top: 0;
+    left: -50px; /* Изображение вылетает слева */
+    animation-duration: 90s;
+}
+
+.floating-images img:nth-child(8) {
+    top: 100%;
+    left: -50px; /* Изображение вылетает слева */
+    animation-duration: 72s;
+}
+
+.floating-images img:nth-child(9) {
+    top: 0;
+    left: 100%; /* Изображение вылетает справа */
+    animation-duration: 100s;
+}
+
+.floating-images img:nth-child(10) {
+    top: 100%;
+    left: 100%; /* Изображение вылетает справа */
+    animation-duration: 110s;
+}
+
+.floating-images img:nth-child(11) {
+    top: 50%;
+    left: -50px;  /* Изображение вылетает слева */
+    animation-duration: 120s;
+}
+
+.floating-images img:nth-child(12) {
+    top: 50%;
+    left: 100%;  /* Изображение вылетает справа */
+    animation-duration: 95s;
+}
+
+.floating-images img:nth-child(13) {
+    top: 0;
+    left: 50%;  /* Изображение вылетает сверху */
+    animation-duration: 110s;
+}
+
+/* Анимация хаотичного движения изображений */
+@keyframes float {
+    0% {
+        transform: translateX(0) translateY(0); /* Начало с текущей позиции */
+    }
+    25% {
+        transform: translateX(25vw) translateY(-20vh); /* Перемещение на 25% экрана по горизонтали и вертикали */
+    }
+    50% {
+        transform: translateX(50vw) translateY(20vh); /* Перемещение на 50% экрана */
+    }
+    75% {
+        transform: translateX(75vw) translateY(-15vh); /* Перемещение на 75% экрана */
+    }
+    100% {
+        transform: translateX(100vw) translateY(0); /* Перемещение до конца экрана */
+    }
+}
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+        max-width: 1200px;
+        background: rgba(255, 255, 255, 0.1); /* Полупрозрачный белый фон */
+        border-radius: 20px;
+        padding: 20px;
+        position: relative;
+        left: 0;
+    }
+
+    .left {
+        flex: 3; /* Увеличен размер для правой части */
+        padding-left: 20px;
+    }
+
+    .left p {
+        color: #605e5e; /* Нежный бело-розовый */
+        font-size: 1.1em;
+    }
+
+    form {
+        background-color: rgba(255, 255, 255, 0.15); /* Полупрозрачный белый */
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        color: #333333; /* Темно-серый цвет для текста меток */
+        display: block;
+        font-size: 1.1em;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #ffc2c2; /* Розовый оттенок */
+        background-color: #ffe5e5; /* Светло-розовый */
+        color: #333333; /* Темно-серый для текста в полях */
+        font-size: 1em;
+    }
+
+    input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="date"]:focus {
+        outline: none;
+        border-color: #ff9c9c;
+        background-color: #ffefef;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        background-color: #ff9c9c;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #ff7575;
+    }
+
+    button:active {
+        background-color: #ff5a5a;
+    }
+
+    /* Правка профиля */
+    .profile {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 20px;
+        background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+        border-radius: 20px;
+        min-height: 500px; /* Увеличенная минимальная высота */
+        box-shadow: none; /* Убираем тень */
+    }
+
+    .profile-img {
+        max-width: 300px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+    }
+
+    .profile-right {
+        flex: 2;
+        padding-left: 20px;
+    }
+
+    .profile-right h3 {
+        color: #ffd1d1;
+        margin-bottom: 10px;
+    }
+
+    .profile-right ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .profile-right li {
+        color: #333333; /* Темно-серый цвет для текста в списках */
+        margin-bottom: 5px;
+        font-size: 1.1em;
+    }
+
+    .telegram-icon {
+        width: 50px;
+        height: 50px;
+        margin-top: 20px;
+        transition: transform 0.2s;
+    }
+
+    .telegram-icon:hover {
+        transform: scale(1.5);
+    }
+
+    .instagram-icon {
+        width: 50px;
+        height: 50px;
+        margin-top: 20px;
+        transition: transform 0.2s;
+    }
+
+    .instagram-icon:hover {
+        transform: scale(1.5);
+    }
+
+    /* Текст с градиентом и обводкой */
+    h2 {
+        font-size: 2em;
+        background: linear-gradient(to right, #d5006c, #ff4081); /* Градиент от темного розового к светлому */
+        -webkit-background-clip: text; /* Для вебкита (Chrome, Safari) */
+        color: transparent; /* Убираем стандартный цвет текста */
+        text-shadow: 
+            0 0 5px #ff4081; /* Обводка для текста */
+    }
+
+    ul {
+        list-style-type: none; /* Убираем стандартные маркеры списка */
+        padding: 0;
+    }
+
+    ul li {
+        display: flex;
+        align-items: center; /* Выравниваем изображение и текст по вертикали */
+        margin-bottom: 10px;
+    }
+
+    ul li img {
+        width: 30px; /* Размер изображения */
+        height: 30px; /* Размер изображения */
+        margin-right: 10px; /* Отступ между изображением и текстом */
+    }
+
+    @keyframes backgroundAnimation {
+        0% {
+            background-color: #f49bb9;
+        }
+        50% {
+            background-color: #f63787;
+        }
+        100% {
+            background-color: #f94f88;
+        }
+    }
+
+    .container {
+        animation: backgroundAnimation 30s infinite ease-in-out;
+    }
+
+
+    .info-block {
+        display: flex;
+        flex-direction: column; /* Все элементы располагаются по вертикали */
+        align-items: center; /* Центрируем содержимое по горизонтали */
+        width: 100%;
+        margin-top: 20px;
+        padding: 20px;
+        background-color: rgba(255, 245, 245, 0.9); /* Светлый фон */
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для объема */
+        position: relative; /* Чтобы блок был ниже профиля */
+    }
+    
+    .info-down {
+        text-align: center; /* Текст и элементы внутри выравниваются по центру */
+        padding: 10px 20px;
+    }
+    
+    .info-down h3 {
+        margin-bottom: 10px;
+        font-size: 1.5em;
+        color: #ff6161; /* Яркий розовый цвет для заголовка */
+    }
+    
+    .info-down p {
+        font-size: 1em;
+        color: #333333; /* Темный текст */
+        margin-bottom: 20px;
+    }
+    
+    .info-down button {
+        padding: 12px 30px;
+        font-size: 1.1em;
+        color: white;
+        background-color: #ff9c9c; /* Розовый фон */
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    
+    .info-down button:hover {
+        background-color: #ff7575;
+        transform: scale(1.05); /* Легкое увеличение кнопки при наведении */
+    }
+    
+    .info-down button:active {
+        background-color: #ff5a5a;
+        transform: scale(0.95); /* Легкое уменьшение при нажатии */
+    }
+    
+    .info-left img {
+        max-width: 100%;
+        border-radius: 15px; /* Скругленные края изображения */
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для объема */
+    }
+    
+
+
+    

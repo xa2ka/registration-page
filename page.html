@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="page.css">
+
+
+    <link rel="icon" href="media/favicon.png" type="image/png">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+    <div class="floating-images">
+        <!-- Пример изображений для фона -->
+        <img src="media/Faberlic-Logo.png" alt="Floating Image 1">
+        <img src="media/Faberlic-Logo.png" alt="Floating Image 2">
+        <img src="media/Faberlic-Logo.png" alt="Floating Image 3">
+        <img src="media/Faberlic-Logo.png" alt="Floating Image 5">
+        <img src="media/Faberlic-Logo.png" alt="Floating Image 6">
+        <img src="media/Faberlic-Logo.png" alt="Floating Image 7">
+        <img src="media/Faberlic-Logo.png" alt="Floating Image 8">
+        <img src="media/Faberlic-Logo.png" alt="Floating Image 9">
+        <img src="media/Faberlic-Logo.png" alt="Floating Image 10">
+        <img src="media/Faberlic-Logo.png" alt="Floating Image 11">
+        <img src="media/Faberlic-Logo.png" alt="Floating Image 12">
+        <img src="media/Faberlic-Logo.png" alt="Floating Image 13">
+    </div>
+    <title>Регистрация</title>
+    <div class="container">
+        <div class="left">
+            <h2>Регистрация в компании Faberlic</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="lastName">Фамилия:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="firstName">Имя:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+375 29 113 56 98">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Почта:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Дата рождения:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Зарегистрироваться</button>
+                </div>
+                <div id="telegramButtonContainer" style="display: none;">
+                    <a href="https://t.me/OlgaKavaleva" target="_blank">
+                        <button type="button">Завершить регистрацию, перейдя ко мне в тг</button>
+                    </a>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+
+    <!-- Секция с фотографией и информацией -->
+    <div class="profile">
+        <div class="right">
+            <h2>Или введите мой номер пригласившего при регистрации</h2>
+            <form id="linkForm">
+                <div class="form-group">
+                    <label for="copyText">Номер пригласившего:</label>
+                    
+                    <input type="text" id="copyText" value="703445727" readonly>
+                </div>
+
+                <div class="form-group">
+                    <button type="button" onclick="copyToClipboard()">Скопировать</button>
+                </div>
+
+                <div class="form-group">
+                    <a href="https://faberlick.by/" target="_blank">
+                        <button type="button">Перейти на страницу регистрации Faberlic</button>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="page.js"></script>
+</body>
+</html>
+
+
+
+
+
